@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Patitas Occi — Renovando con Amor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐾%3C/text%3E%3C/svg%3E">
+    <style>
+        :root {
+            --bg: #eaf7fc;
+            --white: #ffffff;
+            --primary: #5bc0eb;
+            --primary-strong: #00bcd4;
+            --dark: #0f172a;
+            --radius: 1.5rem;
+        }
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            /* Fondo con gradiente más sutil y moderno */
+            background: linear-gradient(135deg, #f0f8ff, #dff3fa);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+        .main-card {
+            max-width: 580px;
+            width: 100%;
+            /* Efecto de tarjeta de cristal moderno (Glassmorphism ligero) */
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius);
+            padding: 3rem 2rem 2.5rem;
+            box-shadow: 0 40px 80px rgba(0, 188, 212, 0.2);
+            border: 2px solid rgba(0, 188, 212, 0.1);
+            position: relative;
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg); /* Preparación para futuros efectos 3D */
+            transition: transform 0.3s ease-in-out;
+        }
+        .logo-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 188, 212, 0.1);
+            padding-bottom: 1rem;
+        }
+        .logo-badge {
+            /* Diseño de logo más limpio */
+            background: linear-gradient(45deg, var(--primary), var(--primary-strong));
+            color: var(--white);
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.4rem;
+            box-shadow: 0 8px 15px rgba(0, 188, 212, 0.3);
+        }
+        .logo-title h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            line-height: 1.2;
+            text-align: left;
+        }
+        .logo-title small {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--primary-strong);
+            text-align: left;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-strong);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .tagline {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            color: var(--dark);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            color: rgba(15, 23, 42, .8);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+        .icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .icon-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 188, 212, .3);
+        }
+        
+        /* Estilos de Color e Iconos (usando SVG) */
+        .icon { width: 24px; height: 24px; fill: currentColor; }
+
+        .icon-btn.whatsapp { background-color: #25D366; }
+        .icon-btn.instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+        .icon-btn.facebook { background-color: #1877F2; }
+        
+        footer {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: rgba(15, 23, 42, .5);
+        }
+
+        /* Indicador de estado flotante */
+        .status-pill {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(90deg, #d4edda, #c3e6cb);
+            color: #155724;
+            padding: .4rem .8rem;
+            border-radius: 999px;
+            font-size: .75rem;
+            font-weight: 600;
+            box-shadow: 0 5px 10px rgba(212, 237, 218, 0.5);
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-card">
+        <div class="status-pill">
+            En línea y Operando
+        </div>
+
+        <div class="logo-header">
+            <div class="logo-badge">PO</div>
+            <div class="logo-title">
+                <h1>Patitas Occi</h1>
+                <small>Rescate · Adopción · Comunidad</small>
+            </div>
+        </div>
+        
+        <h2>🚧 MANTENIMIENTO WEB</h2>
+        <div class="tagline">
+            Volveremos con un sitio más rápido y completo.
+        </div>
+
+        <p>
+            Estamos optimizando la plataforma para incluir un <strong>catálogo de productos</strong>, un <strong>formulario de adopción</strong> simplificado y un panel para nuestros <strong>aliados veterinarios y estilistas</strong>.
+            <br>
+            ¡Gracias por tu paciencia! Nuestro trabajo de rescate y adopción continúa sin pausa.
+        </p>
+        
+        <p>
+            <strong>Contacto Directo:</strong> WhatsApp 7110-2846
+        </p>
+
+        <div class="social-links">
+            <a class="icon-btn whatsapp" href="https://wa.me/50671102846" target="_blank" rel="noreferrer" aria-label="WhatsApp 7110-2846">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.04 2c-5.54 0-10 4.46-10 10 0 1.67.43 3.3 1.22 4.73l-.9 3.25 3.37-.88c1.37.74 2.87 1.14 4.11 1.14 5.54 0 10-4.46 10-10s-4.46-10-10-10zm.04 18.06c-1.35 0-2.65-.36-3.79-1.04l-.27-.16-2.8 1.12 1.05-2.73-.18-.28c-.73-1.12-1.1-2.45-1.1-3.79 0-4.66 3.79-8.45 8.45-8.45s8.45 3.79 8.45 8.45-3.79 8.45-8.45 8.45zm5.17-6.85c-.28-.14-.73-.36-1.05-.48-.32-.12-.55-.18-.79.18-.23.36-.88 1.07-1.07 1.29-.19.23-.39.25-.74.09s-1.49-.55-2.83-1.74c-.23-.19-.48-.32-.67-.54-.19-.22-.02-.35.15-.49.15-.12.33-.31.48-.48.14-.14.2-.28.3-.47s.07-.35 0-.52c-.07-.16-.65-1.57-.89-2.15-.23-.55-.47-.46-.65-.46-.19 0-.39 0-.59.01s-.51-.08-.78.31c-.28.4-.73 1.77-.73 2.16 0 .4.28.8.6 1.16.32.36 1.48 2.26 3.59 3.09 2.01.79 3.1 1.05 3.96.96.88-.1 1.24-.6 1.43-.99s.21-.73.15-1.07c-.07-.33-.28-.52-.58-.68z"/></svg>
+            </a>
+            <a class="icon-btn instagram" href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4 11.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-4 3c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm4-8.5c-.34 0-.62-.28-.62-.62s.28-.62.62-.62.62.28.62.62-.28.62-.62.62zM12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </a>
+            <a class="icon-btn facebook" href="https://facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.07 16.92L14.07 22H9.93V16.92H8V13.88H9.93V11.75C9.93 9.77 11.13 8.71 14.15 8.71H16.93V11.75H15.42C14.7 11.75 14.07 12.38 14.07 13.09V13.88H17.07L16.59 16.92H14.07zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        Patitas Occi · Proyecto social de adopción y bienestar animal · Sitio provisional
+    </footer>
+</body>
+</html>
