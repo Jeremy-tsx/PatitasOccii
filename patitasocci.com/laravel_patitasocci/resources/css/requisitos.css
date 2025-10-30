@@ -1,0 +1,122 @@
+/* Estilos generales para el formulario */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo del formulario */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
+}
+
+/* Estilos para las etiquetas */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333; /* Color de las etiquetas */
+}
+
+/* Estilos para los campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; /* Borde de los campos */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* Estilo de los campos en foco */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #5cb85c; /* Cambia el color del borde al hacer foco */
+    outline: none;
+}
+
+/* Estilo para el textarea */
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Estilos para los botones de radio */
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilo para los contenedores de las opciones de radio */
+form .form-group > div {
+    margin-bottom: 10px;
+}
+
+/* Estilo para el botón de envío */
+form button[type="submit"] {
+    background-color: #5cb85c; /* Fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+/* Estilo del botón al pasar el mouse */
+form button[type="submit"]:hover {
+    background-color: #4cae4c; /* Fondo del botón al pasar el mouse */
+}
+
+/* Estilo para mensajes de error */
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select {
+    border-color: #e74c3c; /* Color del borde en caso de error */
+}
+
+.form-group.error label {
+    color: #e74c3c; /* Color de la etiqueta en caso de error */
+}
+
+/* Estilo para mensajes de éxito */
+.success-message {
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilo para mensajes de error globales */
+.error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilo para una buena accesibilidad */
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: 2px solid #5cb85c; /* Borde de enfoque accesible */
+}
+
+@media (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+    form {
+        padding: 15px;
+    }
+
+    form button[type="submit"] {
+        width: 100%; /* El botón ocupa todo el ancho en móviles */
+        font-size: 16px;
+    }
+}

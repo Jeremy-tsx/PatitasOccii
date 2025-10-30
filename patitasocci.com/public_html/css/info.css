@@ -1,0 +1,483 @@
+/*
+
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+---------------------------------------------
+Table of contents
+------------------------------------------------
+1. Typography
+2. General
+3. Nav
+4. Hero Carousel
+5. Accordion
+6. Shop
+7. Product
+8. Carousel Hero
+9. Carousel Brand
+10. Services
+11. Contact map
+12. Footer
+13. Small devices (landscape phones, 576px and up)
+14. Medium devices (tablets, 768px and up)
+15. Large devices (desktops, 992px and up)
+16. Extra large devices (large desktops, 1200px and up)
+--------------------------------------------- */
+
+
+/* header */
+
+.custom_nav-container {
+  background-color: rgba(50, 223, 255, 0.9);
+  padding: auto auto;
+  z-index: 99999;
+  background-size: cover;
+}
+.header_section {
+  background-color: rgba(50, 223, 255, 255); /* Cambia el valor de la transparencia según tus preferencias */
+  padding-top: 10px;
+  position:relative;
+  top: 0%;
+  width: 100%;
+  transition: background-color 0.3s ease; /* Agrega una transición suave para el cambio de color de fondo */
+}
+
+.custom_nav-container .navbar-brand {
+  color: #f8f8f8;
+  text-align: justify;
+  font-size: 25px; /* Tamaño del texto del navbar */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.544); /* Ajusta el tamaño y color según sea necesario */
+
+}
+
+.custom_nav-container .navbar-brand img {
+  width: 35px; /* Tamaño del logo */
+  margin-right: 6px;
+  vertical-align:auto;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -8px;
+}
+
+  
+
+.custom_nav-container .navbar-nav {
+  margin-left: auto; /* Alinear elementos a la derecha */
+}
+
+
+.custom_nav-container .navbar-nav .nav-item {
+  margin-left: 10px; /* Espaciado entre elementos */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Ajusta el tamaño y color según sea necesario */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.custom_nav-container .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 14px; /* Tamaño de los enlaces */
+  text-transform: uppercase;
+}
+
+.custom_nav-container .navbar-toggler {
+  border: none; /* Elimina cualquier borde que pueda ocultar el ícono */
+  background-color: transparent; /* Asegura que el fondo sea transparente */
+  outline: none; /* Elimina el contorno al hacer clic en el ícono */
+}
+
+.custom_nav-container .navbar-toggler-icon {
+  background-image: url(../images/menu.png); /* Ajusta la imagen del ícono del menú */
+  background-size: cover; /* Asegura que la imagen del ícono se ajuste correctamente */
+  width: 40px; /* Ajusta el tamaño del ícono del menú */
+  height: 40px;
+}
+/* Estilos para el ícono de usuario y dropdown */
+.user-icon {
+  width: 30px; /* Tamaño del ícono de usuario */
+  height: 30px;
+  margin-left: 5px;
+}
+
+
+
+.dropdown-menu .dropdown-item {
+  color: #000;
+  margin-left: 1px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #32dfff;
+  color: #fff;
+}
+
+/* Estilos para el menú responsive */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: rgba(50, 223, 255, 0.9); /* Fondo del menú responsivo */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y:scroll;
+  }
+
+  .navbar-collapse.show {
+    display: block; /* Muestra el menú cuando está abierto */
+  }
+
+
+  .navbar-nav {
+    flex-direction: column; /* Alinear elementos en columna en móvil */
+    align-items: center; /* Centrar los elementos en el eje vertical */
+    justify-content: center; /* Centrar los elementos en el eje horizontal */
+    height: 100vh; /* Asegurar que ocupe toda la altura */
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0; /* Espaciado entre elementos en móvil */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 30px; /* Tamaño de los enlaces en móvil */
+    text-align: center;
+    padding: 10px; /* Espaciado interno de los enlaces en móvil */
+  }
+
+  .user-icon {
+    width: 40px; /* Tamaño del ícono de usuario en dispositivos móviles */
+    height: 40px;
+    align-items: center;
+    margin-bottom: 4px; /* Espacio entre ícono de usuario y otros enlaces en móvil */
+  }
+  .dropdown-menu {
+    background-color: rgba(50, 223, 255, 0.9); /* Fondo del dropdown */
+    border: none; /* Sin borde */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 5px; /* Bordes redondeados */
+    left: auto; /* Ajusta la posición para que el menú aparezca a la izquierda */
+    right: 0; /* Asegura que el menú no se extienda a la derecha */
+  }
+  
+  .dropdown-menu.show {
+    left: 0; /* Ajusta la posición cuando el menú está desplegado */
+  }
+}
+/* Dropdown del icono de usuario */
+.dropdown-menu {
+  background-color: rgba(50, 223, 255, 0.9); /* Fondo del dropdown */
+  border: none; /* Sin borde */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 5px; /* Bordes redondeados */
+  left: auto; /* Ajusta la posición para que el menú aparezca a la izquierda */
+  right: 0; /* Asegura que el menú no se extienda a la derecha */
+}
+
+.dropdown-menu.show {
+  margin-right:30px; /* Ajusta la posición cuando el menú está desplegado */
+}
+
+/* Estilos para los ítems del dropdown */
+.dropdown-item {
+  color: #fff; /* Color de texto */
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 16px; /* Tamaño de fuente */
+  padding: 7px 20px; /* Espaciado interno */
+}
+
+/* Ajustes adicionales si es necesario */
+.user-icon {
+  margin-left: 5px; /* Espaciado entre el ícono y el primer elemento del dropdown */
+}
+
+.dropdown-item img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.dropdown-item span {
+  vertical-align: middle;
+}
+
+/* Typography */
+body, ul, li, p, a, label, input, div {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    font-size: 18px !important;
+    font-weight: 300 !important;
+  }
+  .h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px !important;
+    font-weight: 200 !important;
+  }
+  .h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px !important;
+    font-weight: 300;
+  }
+  .h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px !important;
+  }
+  /* General */
+  .logo { font-weight: 500 !important;}
+  .text-warning {  color: #ede861 !important;}
+  .text-muted { color: rgb(61, 60, 60) !important;}
+  .text-success { color: #59ab6e !important;}
+  .text-light { color: #cfd6e1 !important;}
+  .bg-dark { background-color: #212934 !important;}
+  .bg-light { background-color: #e9eef5 !important;}
+  .bg-black { background-color: #1d242d !important;}
+  .bg-success { background-color: #59ab6e !important;}
+  .btn-success {
+    background-color: #099ceb !important;
+    border-color: #0a98f0 !important;
+  }
+  .btn-edit{
+    background-color: #17d311;
+    border-color: #17d311;
+    color: white;
+  }
+  .btn-delete{
+    background-color: rgba(211, 8, 8, 0.703);
+    border-color: rgba(211, 8, 8, 0.703);   
+    color: white;
+  }
+  .pagination .page-link:hover {color: #000;}
+  .pagination .page-link:hover, .pagination .page-link.active {
+    background-color: #69bb7e;
+    color: #fff;
+  }
+  /* Nav */
+  #templatemo_nav_top { min-height: 40px;}
+  #templatemo_nav_top * { font-size: .9em !important;}
+  #templatemo_main_nav a { color: #212934;}
+  #templatemo_main_nav a:hover { color: #69bb7e;}
+  #templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
+  
+  /* Hero Carousel */
+  #template-mo-zay-hero-carousel { background: #efefef !important;}
+  /* Accordion */
+  .templatemo-accordion a { color: #000;}
+  .templatemo-accordion a:hover { color: #333d4a;}
+  /* Shop */
+  .shop-top-menu a:hover { color: #69bb7e !important;}
+  /* Product */
+  .product-wap { box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);}
+  .product-wap .product-color-dot.color-dot-red { background:#f71515;}
+  .product-wap .product-color-dot.color-dot-blue { background:#6db4fe;}
+  .product-wap .product-color-dot.color-dot-black { background:#000000;}
+  .product-wap .product-color-dot.color-dot-light { background:#e0e0e0;}
+  .product-wap .product-color-dot.color-dot-green { background:#0bff7e;}
+  .card.product-wap .card .product-overlay {
+    background: rgba(0,0,0,.2);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+  }
+  .card.product-wap:hover .card .product-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+  .card.product-wap a { color: #000;}
+  #carousel-related-product .slick-slide:focus { outline: none !important;}
+  #carousel-related-product .slick-dots li button:before {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  /* Brand */
+  .brand-img {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: .5s;
+  }
+  .brand-img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  /* Carousel Hero */
+  #template-mo-zay-hero-carousel .carousel-indicators li {
+    margin-top: -50px;
+    background-color: #59ab6e;
+  }
+  #template-mo-zay-hero-carousel .carousel-control-next i,
+  #template-mo-zay-hero-carousel .carousel-control-prev i {
+    color: #59ab6e !important;
+    font-size: 2.8em !important;
+  }
+  /* Carousel Brand */
+  .tempaltemo-carousel .h1 {
+    font-size: .5em !important;
+    color: #000 !important;
+  }
+  /* Services */
+  .services-icon-wap {transition: .3s;}
+  .services-icon-wap:hover, .services-icon-wap:hover i {color: #fff;}
+  .services-icon-wap:hover {background: #69bb7e;}
+  /* Contact map */
+  .leaflet-control a, .leaflet-control { font-size: 10px !important;}
+  .form-control { border: 1px solid #e8e8e8;}
+  /* Footer */
+  #tempaltemo_footer a { color: #dcdde1;}
+  #tempaltemo_footer a:hover { color: #68bb7d;}
+  #tempaltemo_footer ul.footer-link-list li { padding-top: 10px;}
+  #tempaltemo_footer ul.footer-icons li {
+    width: 2.6em;
+    height: 2.6em;
+    line-height: 2.6em;
+  }
+  #tempaltemo_footer ul.footer-icons li:hover {
+    background-color: #cfd6e1;
+    transition: .5s;
+  }
+  #tempaltemo_footer ul.footer-icons li:hover i {
+    color: #212934;
+    transition: .5s;
+  }
+  #tempaltemo_footer .border-light { border-color: #2d343f !important;}
+  /*
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query since this is the default in Bootstrap
+  */
+  /* Small devices (landscape phones, 576px and up)*/
+  .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {
+    font-size: 12px !important;
+  }
+  .product-wap .product-color-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .image-container {
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.adopt-button {
+    background-color: #3bc1d0;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border-radius: 30px;
+
+}
+
+.adopt-button:hover {
+    background-color: rgb(36, 109, 227);
+    color: white;
+}
+
+/* Estilos para el mensaje de alerta */
+.adopt-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.message-content {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+.message-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.close-btn {
+  background-color: #22c0ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.close-btn:hover {
+  background-color: #1983e6;
+}
+
+
+
+
+/* Animación de aparición del mensaje */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+  
+  @media (min-width: 576px) {
+    .tempaltemo-carousel .h1 { font-size: 1em !important;}
+  }
+  
+  /*// Medium devices (tablets, 768px and up)*/
+  @media (min-width: 768px) {
+    #templatemo_main_nav .navbar-nav {max-width: 450px;}
+   }
+  
+  /* Large devices (desktops, 992px and up)*/
+  @media (min-width: 992px) {
+    #templatemo_main_nav .navbar-nav {max-width: 550px;}
+    #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
+    .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
+    .product-wap .product-color-dot {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up)*/
+  @media (min-width: 1200px) {}
+  

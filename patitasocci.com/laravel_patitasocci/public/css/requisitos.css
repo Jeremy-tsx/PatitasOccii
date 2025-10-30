@@ -1,0 +1,154 @@
+*{
+    width: 100%;
+    
+}
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f5f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilos del Formulario */
+.adoption-form {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 70px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.adoption-form h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #34495e;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.adoption-form h1::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #1abc9c;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+    font-family:"Bodoni Moda SC", serif;
+    font-weight:700;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #ecf0f1;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.15);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-group label {
+    margin: 0;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.radio-group input[type="radio"] {
+    transform: scale(1.2);
+    accent-color: #1abc9c;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #1abc9c;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+    .adoption-form {
+        padding: 30px;
+    }
+
+    .adoption-form h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-control {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Styles */
+.adoption-form {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.adoption-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #4a90e2;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 3px rgba(74, 144, 226, 0.5);
+}
+
+/* Radio Group */
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio-group label {
+    margin-left: 5px;
+    font-weight: normal;
+    color: #555;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+/* Buttons */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background: #357ab7;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .adoption-form {
+        padding: 15px;
+    }
+
+    .adoption-form h2 {
+        font-size: 1.5em;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+}
